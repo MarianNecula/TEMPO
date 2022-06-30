@@ -2,12 +2,8 @@ tempo_download <- function(payloads = list(), path = NULL){
   
   url_csv <- "http://statistici.insse.ro:8077/tempo-ins/pivot"
   
-  
-  
-  
   for(i in 1:length(payloads)){
   
-    
   if(is.null(payloads[[i]]$replace_me)){
     
     payload <- payloads[[i]]
@@ -27,8 +23,6 @@ tempo_download <- function(payloads = list(), path = NULL){
     h1 <- NULL  
 
   } else {
-    
-    big_data <- data.frame()
     
     payload <- payloads[[1]]
     
