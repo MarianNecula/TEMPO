@@ -18,8 +18,6 @@
 #' @param directory - a valid path where the files will be downloaded. The implicit value 
 #' is NULL, i.e. current working directory.
 #' 
-#' @details 
-#' 
 #' @examples \dontrun{
 #' # Download a single table and write on disk
 #' tempo_bulk("SOM101D", "ro")

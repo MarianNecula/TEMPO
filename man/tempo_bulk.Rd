@@ -26,9 +26,6 @@ files as TEMPO Online matrices. If those files are more recent than
 the last date upon which the TEMPO matrices have been updated,
 the function skips them at download.
 }
-\details{
-
-}
 \examples{
 \dontrun{
 # Download a single table and write on disk

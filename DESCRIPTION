@@ -7,18 +7,17 @@ Authors@R: c(
   person("Bogdan", "Oancea", email = "bogdan.oancea@gmail.com", role = "aut"),  
   person("Ana Maria", "Tiru", email = "tiru.ana21@gmail.com",role = "aut"))
 Maintainer: Marian Necula <marian.necula00@gmail.com>
-Description: Tools to download data from Tempo Online Database and build different visualisations of the data
+Description: Tools to download data from Tempo Online Database
 License: GPL3 + EUPL
 Depends:
     curl,
     jsonlite,
-    utils,
-    dplyr,
-    ggplot2,
-    R (>= 3.3.0)
+    utils
+Suggests:
+    R (>= 4.2.0)
 Encoding: UTF-8
 LazyData: true
 Author: Marian Necula [aut, cre],
   Bogdan Oancea [aut],
   Ana Maria Tiru [aut]
-RoxygenNote: 6.1.1
+RoxygenNote: 7.2.3

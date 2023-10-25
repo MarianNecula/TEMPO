@@ -9,6 +9,8 @@ tempo_toc(full_description = FALSE, language = c("ro", "en"))
 \arguments{
 \item{full_description}{- implicitly set as false
 if fulldescription == TRUE then starts collecting dates for last updates}
+
+\item{language}{- set the language for data download. Options romanian ro or english en}
 }
 \value{
 Returns a dataframe object.

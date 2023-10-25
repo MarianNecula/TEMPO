@@ -18,6 +18,10 @@ tempo_download <- function(payloads = list(), path = NULL){
     
     handle_setopt(h1, .list = list(customrequest = "POST" ,  postfields = payload_to_json))
     
+    url_mat <- paste0("http://statistici.insse.ro:8077/tempo-ins/matrix/", payload$matcode)
+    
+    tempo_logger(curl_fetch_memory(url_mat))
+    
     curl_download(url_csv, paste0(path, payload$matCode, ".csv"), quiet = FALSE, mode = "wb", handle =  h1)
     
     h1 <- NULL  
@@ -33,6 +37,7 @@ tempo_download <- function(payloads = list(), path = NULL){
     results <- data.frame()
     
     succes2 <- function(req){
+      tempo_logger(req)
       w <- readBin(req$content, "character")
       z <- read.csv2(text = w, sep = ",", stringsAsFactors = FALSE)
       z <- as.data.frame(z)

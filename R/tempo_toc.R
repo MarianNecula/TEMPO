@@ -7,6 +7,7 @@
 #' @param full_description - implicitly set as false  
 #' if fulldescription == TRUE then starts collecting dates for last updates
 #' 
+#' @param language - set the language for data download. Options romanian ro or english en
 #' @return Returns a dataframe object. 
 #' 
 #' 
@@ -32,6 +33,7 @@ tempo_toc <- function(full_description = FALSE, language = c("ro", "en")) {
     cat("Invalid argument for language: ", language[1], "\nArguments accepted: \"ro\" or \"en\".\n")
     return (NULL)
   }
+  tempo_logger(response)
   responsetext <- readBin(response$content, what = "text")
   tempo_toc <- fromJSON(responsetext, flatten = TRUE)
   tempo_toc <- tempo_toc[,c(1,2)]

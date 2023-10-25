@@ -1,0 +1,7 @@
+INFO: http://statistici.insse.ro:8077/tempo-ins/matrix/matrices| Status: 200| Matrix: matrices| TIME: 2023-10-20 13:23:14
+ERROR: http://statistici.insse.ro:8077/tempo-ins/matrix/| Status: 404| Matrix: matrix| TIME: 2023-10-20 13:23:24
+ERROR: http://statistici.insse.ro:8077/tempo-ins/matrix/| Status: 404| Matrix: matrix| TIME: 2023-10-20 13:25:48
+ERROR: http://statistici.insse.ro:8077/tempo-ins/matrix/| Status: 404| Matrix: matrix| TIME: 2023-10-20 13:25:49
+ERROR: http://statistici.insse.ro:8077/tempo-ins/matrix/| Status: 404| Matrix: matrix| TIME: 2023-10-20 13:25:49
+ERROR: http://statistici.insse.ro:8077/tempo-ins/matrix/| Status: 404| Matrix: matrix| TIME: 2023-10-20 13:25:50
+ERROR: http://statistici.insse.ro:8077/tempo-ins/matrix/| Status: 404| Matrix: matrix| TIME: 2023-10-20 13:25:51
