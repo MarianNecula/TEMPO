@@ -4,7 +4,7 @@
 \alias{tempo_toc}
 \title{tempo_toc}
 \usage{
-tempo_toc(full_description = FALSE, language = c("ro", "en"))
+tempo_toc(full_description = FALSE, language = c("ro"))
 }
 \arguments{
 \item{full_description}{- implicitly set as false
