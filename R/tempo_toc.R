@@ -22,7 +22,11 @@
 #' @import utils 
 #' @export
 
-tempo_toc <- function(full_description = FALSE, language = c("ro", "en")) {
+tempo_toc <- function(full_description = FALSE, language = c("ro")) {
+  if(length(language) != 1) {
+    message("Invalid argument for language. Arguments accepted: \"ro\" or \"en\".\n")
+    return(invisible(NULL))
+  }
   if (language[1] == "ro") {
     response <- curl_fetch_memory("http://statistici.insse.ro:8077/tempo-ins/matrix/matrices")
     lang <- ""
@@ -30,8 +34,12 @@ tempo_toc <- function(full_description = FALSE, language = c("ro", "en")) {
     response <- curl_fetch_memory("http://statistici.insse.ro:8077/tempo-ins/matrix/matrices/?lang=en/")
     lang <- "/?lang=en/"
   } else{
-    cat("Invalid argument for language: ", language[1], "\nArguments accepted: \"ro\" or \"en\".\n")
-    return (NULL)
+    message("Invalid argument for language: ", language[1], "\nArguments accepted: \"ro\" or \"en\".\n")
+    return (invisible(NULL))
+  }
+  if(!is.logical(full_description)) {
+    message("full_description should have a logical value!\n")
+    return(invisible(NULL))
   }
   tempo_logger(response)
   responsetext <- readBin(response$content, what = "text")
@@ -55,7 +63,6 @@ tempo_toc <- function(full_description = FALSE, language = c("ro", "en")) {
       tempo_toc$Last_update[i] <-
         lu_content$ultimaActualizare
     }
-
   }
   return(tempo_toc)
 }

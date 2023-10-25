@@ -1,13 +1,13 @@
 Package: TEMPO
 Type: Package
-Title: Tools for NSI Romania Open data
+Title: Tools for NSI ROmania open data
 Version: 0.0.0.1
 Authors@R: c(
   person("Marian", "Necula", email = "marian.necula00@gmail.com", role = c("aut", "cre")),
   person("Bogdan", "Oancea", email = "bogdan.oancea@gmail.com", role = "aut"),  
   person("Ana Maria", "Tiru", email = "tiru.ana21@gmail.com",role = "aut"))
 Maintainer: Marian Necula <marian.necula00@gmail.com>
-Description: Tools to download data from Tempo Online Database
+Description: Tools to download data from NSI Romania's Tempo Online Database <http://statistici.insse.ro:8077/tempo-online/> together with search utilities
 License: GPL3 + EUPL
 Depends:
     curl,
@@ -17,6 +17,7 @@ Suggests:
     R (>= 4.2.0)
 Encoding: UTF-8
 LazyData: true
+NeedsCompilation: no
 Author: Marian Necula [aut, cre],
   Bogdan Oancea [aut],
   Ana Maria Tiru [aut]
